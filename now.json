@@ -1,5 +1,8 @@
 {
-    "env":{
-        "MONGODB": "mongodb://dbupload:dbupload123@ds145118.mlab.com:45118/dbupload"
+    "env": {
+        "MONGODB": "mongodb://dbupload:dbupload123@ds145118.mlab.com:45118/dbupload",
+        "STORAGE_BUCKET": "upload-posts-7f9b0.appspot.com",
+        "PROJECT_ID": "upload-posts-7f9b0",
+        "STORAGE_TYPE": "dev"
     }
 }
