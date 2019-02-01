@@ -33,14 +33,11 @@ const create = async (req, res) => {
 
         let { originalname: name, size, filename: key, url = "" } = req.file
 
-        if (process.env.STORAGE_TYPE === 'dev') {
+        key = await UploadStorageService.crypto(req.file.originalname)
 
-            key = await UploadStorageService.crypto(req.file.originalname)
+        let file = { ...req.file, originalname: key }
 
-            let file = { ...req.file, originalname: key }
-
-            url = await UploadStorageService.upload(file)
-        }
+        url = await UploadStorageService.upload(file)
 
         const post = await PostModel.create({
             name,

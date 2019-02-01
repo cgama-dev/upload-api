@@ -8,7 +8,7 @@ const format = require('util').format;
 const crypto = require('crypto')
 
 const storage = new Storage({
-    projectId: process.env.PROJECT_ID
+    projectId: "upload-posts-7f9b0"
 });
 
 const UploadStorageService = () => {
@@ -16,7 +16,7 @@ const UploadStorageService = () => {
         upload: (file) => {
             return new Promise((resolve, reject) => {
 
-                const bucket = storage.bucket(process.env.STORAGE_BUCKET);
+                const bucket = storage.bucket('upload-posts-7f9b0.appspot.com');
                 
                 const fileUpload = bucket.file(file.originalname);
 
