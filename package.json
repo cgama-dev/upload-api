@@ -5,7 +5,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "nodemon src/index.js",
-        "start": "node src/index.js"
+        "start": "node --require dotenv/config src/index.js"
     },
     "dependencies": {
         "@google-cloud/storage": "^2.3.4",

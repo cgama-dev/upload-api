@@ -1,1 +1,5 @@
-{}
+{
+    "env":{
+        "MONGODB": "mongodb://dbupload:dbupload123@ds145118.mlab.com:45118/dbupload"
+    }
+}
